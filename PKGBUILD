@@ -33,6 +33,7 @@ if (( !INFAKEROOT )); then
     read user
     echo -n "Enter the password for ${user}: "
     read -s password
+    echo
 fi
 
 source=("http://${user}:${password}@plex.r.worldssl.net/plex-media-server/${pkgver}-${_subver}/plexmediaserver_${pkgver}-${_subver}_${_arch}.deb" "plexmediaserver.conf.d" "plexmediaserver.service" "start_pms")
