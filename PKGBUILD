@@ -20,10 +20,10 @@ install='plexmediaserver.install'
 
 if [ "$CARCH" = "i686" ]; then
     _arch='i386'
-    md5sums=('022bf63df874d14591aa97071307fa09')
+    md5sums=('05772949f9f7ea622b7ba5f0fb18e71c')
 elif [ "$CARCH" = "x86_64" ]; then
     _arch='amd64'
-    md5sums=('d2af3d63cf04d14a7faff959731113c1')
+    md5sums=('f2af4eb42c265cd9d5c78673bf76052e')
 fi
 
 if (( !INFAKEROOT )); then
