@@ -8,13 +8,14 @@
 
 pkgname=plexmediaserver-plexpass
 pkgver=0.9.8.4.125
-pkgrel=1
+pkgrel=2
 _subver=ffe2a5d
 pkgdesc="Plex Media Server for Linux"
 url='http://www.plexapp.com'
 arch=('i686' 'x86_64')
 license=('closed')
 depends=('rsync' 'avahi')
+conflicts=('plexmediaserver')
 backup=('etc/conf.d/plexmediaserver')
 install='plexmediaserver.install'
 
