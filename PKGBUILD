@@ -8,7 +8,7 @@
 
 pkgname=plexmediaserver-plexpass
 pkgver=0.9.8.18.290
-pkgrel=1
+pkgrel=2
 _subver=11b7fdd
 pkgdesc="Plex Media Server for Linux"
 url='http://www.plexapp.com'
@@ -47,14 +47,14 @@ build() {
 }
 
 package() {
-    mkdir -p "${pkgdir}"/opt/plexmediaserver
-    mkdir -p "${pkgdir}"/usr/lib/systemd/system
+    mkdir -p "${pkgdir}/opt/plexmediaserver"
+    mkdir -p "${pkgdir}/usr/lib/systemd/system"
 
-    cp -r usr/lib/plexmediaserver/* "${pkgdir}"/opt/plexmediaserver/
+    cp -r usr/lib/plexmediaserver/* "${pkgdir}/opt/plexmediaserver/"
 
-    install -Dm755 ../start_pms "${pkgdir}"/opt/plexmediaserver/
-    install -Dm644 ../plexmediaserver.conf.d "${pkgdir}"/etc/conf.d/plexmediaserver
-    install -Dm644 ../plexmediaserver.service "${pkgdir}"/usr/lib/systemd/system/plexmediaserver.service
+    install -Dm755 "${srcdir}/start_pms" "${pkgdir}/opt/plexmediaserver/"
+    install -Dm644 "${srcdir}/plexmediaserver.conf.d" "${pkgdir}/etc/conf.d/plexmediaserver"
+    install -Dm644 "${srcdir}/plexmediaserver.service" "${pkgdir}/usr/lib/systemd/system/plexmediaserver.service"
 }
 
 # vim: set ts=4 sts=4 sw=4 ai et:
