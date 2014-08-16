@@ -7,9 +7,9 @@
 # Maintainer: Matt Henkel <guildencrantz@gmail.com>
 
 pkgname=plexmediaserver-plexpass
-pkgver=0.9.9.12.504
+pkgver=0.9.9.14.531
 pkgrel=1
-_subver=3e7f93c
+_subver=7eef8c6
 pkgdesc="PlexPass Release of Plex Media Server for Linux"
 url='http://www.plexapp.com'
 arch=('i686' 'x86_64')
@@ -21,10 +21,10 @@ install='plexmediaserver.install'
 
 if [ "$CARCH" = "i686" ]; then
     _arch='i386'
-    md5sums=('2f66e4ade955d9c0986c5b090df01b4b')
+    md5sums=('1f580f732e3e76134afdb4cd98e64dea')
 elif [ "$CARCH" = "x86_64" ]; then
     _arch='amd64'
-    md5sums=('6d79696f6727976ca4decb0fdf3fb08c')
+    md5sums=('3bc1d1c2378332e054ff493d584b5e8b')
 fi
 
 if (( !INFAKEROOT )); then
@@ -58,3 +58,4 @@ package() {
 }
 
 # vim: set ts=4 sts=4 sw=4 ai et:
+
