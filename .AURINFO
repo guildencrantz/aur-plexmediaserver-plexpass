@@ -1,7 +1,6 @@
 pkgname=plexmediaserver-plexpass
-pkgver=0.9.9.11.501-1
+pkgver=0.9.9.16.555-1
 pkgdesc="PlexPass Release of Plex Media Server for Linux"
 url='http://www.plexapp.com'
 license=('closed')
 depend=('rsync' 'avahi')
-

@@ -27,17 +27,7 @@ elif [ "$CARCH" = "x86_64" ]; then
     md5sums=('016ec179e95b972ea57ff10f1f63f863')
 fi
 
-if (( !INFAKEROOT )); then
-    echo "This package requires that you are a PlexPass member and have access to the PlexPass forum and downloads (http://forums.plexapp.com/index.php/topic/64569-download-instructions/)"
-    echo
-    echo -n "Enter the user to download the package as: "
-    read user
-    echo -n "Enter the password for ${user}: "
-    read -s password
-    echo
-fi
-
-source=("http://${user}:${password}@downloads.plexapp.com/plex-media-server/${pkgver}-${_subver}/plexmediaserver_${pkgver}-${_subver}_${_arch}.deb" "plexmediaserver.conf.d" "plexmediaserver.service" "start_pms")
+source=("http://downloads.plexapp.com/plex-media-server/${pkgver}-${_subver}/plexmediaserver_${pkgver}-${_subver}_${_arch}.deb" "plexmediaserver.conf.d" "plexmediaserver.service" "start_pms")
 md5sums+=('32cdd9f9de446f6646616a0077151726'
           'd850fe41dd35aba09a375ac8d81175e0'
           '34e9ddaab4ffc84ab9835abd16a383b3')
